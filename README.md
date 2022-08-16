@@ -1,6 +1,5 @@
 # Sheruta API Documentation 
-Welcome To Four Anime Scraper This Is For The Sheruta API 
-Build in mind of its corractions
+Welcome To Docs This Is For The Sheruta API 
 
 We are not responsible for the API or it corractions. You should always keep in mind of the rules
 
