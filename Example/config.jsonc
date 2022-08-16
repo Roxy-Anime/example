@@ -1,0 +1,88 @@
+{
+    // Welcome This Is The Default Configuration
+
+
+    // You Can Add Different Module Json Or Yaml Files
+    // By Adding 
+
+    // "include": {
+    //     "module_plugins": "./src/configuration/plugin.json",
+    //     "module_info": "./src/configuration/info.json",
+    //     "moduleConfiguration": "./src/configuration/configuration.json",
+    // },
+    
+    // We Do Support Themes And Plugins
+    // If You Have Plugins You Should Add
+    "modulePlugins": {
+        "plugins": [
+            {
+                // This Will Be The Plugins Name
+                "name": "Example Plugins",
+                "description": "Example Plugins",
+                "type": "plugins",
+                // This should lead the the plugin script
+                "url": "https://example.com/plugins/Example"
+            }
+        ]
+    },
+
+    // This Has To Beed Add For The Module To Render
+    "moduleConfiguration": {
+        // This is if you are in development mode and you want to test it
+        "development": {
+            "uri": "http://localhost",
+            "port": "23450"   
+        },
+
+        "production": {
+            "port": "23451",
+            "protocol": "https",
+            "sslEnabled": true,
+            "sslCertificate": {
+                "key": "key.pem",
+                "cert": "cert.pem"
+            },
+            "uri": "example.com",   
+            "healthcheck": "/hc",
+            "docs": "/docs"
+        }
+    },
+
+    "moduleInfo": {
+        // if there are multiple author you can do something like this:
+        // "author": [
+        //     {
+        //         "name": "John",
+        //         "email": "john@example.com",
+        //         "clientId": "clientId"
+        //     }
+        // ]        
+        "moduleName": "Example Module",
+        "moduleEnv": "production | development",
+        "moduleVerison":  1.0,
+        "moduleAuthor": "example",
+        "moduleDesc": "This is the example api project for people to use",
+        "moduleImage": "/public/logo.png",
+        "moduleLanguage": "ENG",
+        "moduleType": "Video | Image | Text",
+        "moduleSites": {
+            // We Support The following types
+            /**
+                Discord
+                Github
+                Sites
+                More Soon.
+            */
+
+            "Sites": {
+                "Discord": "/discord",
+                "Github": "/github",
+                "Sites": {
+                    "Site_Icon": "/public/icon.png",
+                    "Site_Name": "example",
+                    "Site_Url": "http://example.com/"
+                }
+            }
+        }        
+    }
+}
